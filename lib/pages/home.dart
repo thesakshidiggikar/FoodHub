@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:foodhub/pages/details.dart';
 import 'package:foodhub/widgets/_widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -56,34 +55,43 @@ class _HomeState extends State<Home> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      margin: EdgeInsets.all(6),
-                      child: Material(
-                        elevation: 5.0,
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          child: Column(
-                            //salad edges adjusment
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset("images/salad2.png",
-                                  height: 100, width: 100, fit: BoxFit.cover),
-                              Text("Veggie Teco Hash",
-                                  style: AppWidget.semiboldTextFeildStyle()),
-                              SizedBox(
-                                height: 5.0,
-                              ),
-                              Text("Fresh and Healthy",
-                                  style: AppWidget.lightboldTextFeildStyle()),
-                              SizedBox(
-                                height: 1.0,
-                              ),
-                              Text(
-                                "\$25",
-                                style: AppWidget.semiboldTextFeildStyle(),
-                              )
-                            ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Details(),
+                            ));
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(6),
+                        child: Material(
+                          elevation: 5.0,
+                          borderRadius: BorderRadius.circular(20),
+                          child: Container(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              //salad edges adjusment
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset("images/salad2.png",
+                                    height: 100, width: 100, fit: BoxFit.cover),
+                                Text("Veggie Teco Hash",
+                                    style: AppWidget.semiboldTextFeildStyle()),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text("Fresh and Healthy",
+                                    style: AppWidget.lightboldTextFeildStyle()),
+                                SizedBox(
+                                  height: 1.0,
+                                ),
+                                Text(
+                                  "\$25",
+                                  style: AppWidget.semiboldTextFeildStyle(),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -92,7 +100,7 @@ class _HomeState extends State<Home> {
                       width: 8.0,
                     ),
                     Container(
-                      margin: EdgeInsets.all((4)),
+                      margin: EdgeInsets.all((6)),
                       child: Material(
                         elevation: 5.0,
                         borderRadius: BorderRadius.circular(20),
@@ -107,7 +115,7 @@ class _HomeState extends State<Home> {
                               Text("Veggie Tech Hash",
                                   style: AppWidget.semiboldTextFeildStyle()),
                               SizedBox(
-                                height: 5.0,
+                                height: 1.0,
                               ),
                               Text("Fresh and Healthy",
                                   style: AppWidget.lightboldTextFeildStyle()),
@@ -146,7 +154,7 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.cover,
                         ),
                         SizedBox(
-                          width:8.0,
+                          width: 8.0,
                         ),
                         Column(
                           children: [

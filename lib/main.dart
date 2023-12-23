@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/bottomnav.dart';
 import 'package:foodhub/pages/home.dart';
+import 'package:foodhub/pages/login.dart';
+import 'package:foodhub/pages/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomNav(),
+      home: Signup(),
     );
   }
 }
