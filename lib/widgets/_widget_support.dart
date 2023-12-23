@@ -27,14 +27,14 @@ class AppWidget {
   static TextStyle semiboldTextFeildStyle() {
     return TextStyle(
         color: Colors.black,
-        fontSize: 18.0,
+        fontSize: 12.0,
         fontWeight: FontWeight.bold,
         fontFamily: 'Poppins');
   }
   static TextStyle mediumboldTextFeildStyle() {
     return TextStyle(
         color: Colors.black,
-        fontSize: 13.0,
+        fontSize: 14.0,
         fontWeight: FontWeight.bold,
         fontFamily: 'Poppins');
   }

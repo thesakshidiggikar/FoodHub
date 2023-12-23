@@ -1,4 +1,4 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 import 'package:foodhub/widgets/_widget_support.dart';
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
                 ],
               ),
               SizedBox(
-                height: 10.0,
+                height: 7.0,
               ),
               Text("Delicious Food!",
                   style: AppWidget.HeadlineboldTextFeildStyle()),
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                         elevation: 5.0,
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          padding: EdgeInsets.all(14),
+                          padding: EdgeInsets.all(10),
                           child: Column(
                             //salad edges adjusment
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     SizedBox(
-                      width: 10.0,
+                      width: 8.0,
                     ),
                     Container(
                       margin: EdgeInsets.all((4)),
@@ -127,10 +127,10 @@ class _HomeState extends State<Home> {
                 ),
               ),
               SizedBox(
-                height: 30.0,
+                height: 20.0,
               ),
               Container(
-                margin: EdgeInsets.only(right: 14.0),
+                margin: EdgeInsets.only(right: 10.0),
                 child: Material(
                   elevation: 5.0,
                   borderRadius: BorderRadius.circular(20),
@@ -146,7 +146,7 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.cover,
                         ),
                         SizedBox(
-                          width:20.0,
+                          width:8.0,
                         ),
                         Column(
                           children: [
