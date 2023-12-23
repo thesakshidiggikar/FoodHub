@@ -1,5 +1,4 @@
 import 'dart:ffi';
-import 'dart:js_interop_unsafe';
 
 import 'package:flutter/material.dart';
 import 'package:foodhub/widgets/_widget_support.dart';
@@ -19,7 +18,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Container(
           margin: EdgeInsets.only(
-            top: 50.0,
+            top: 10.0,
             left: 20.0,
           ),
           child: Column(
@@ -41,7 +40,7 @@ class _HomeState extends State<Home> {
                 ],
               ),
               SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Text("Delicious Food!",
                   style: AppWidget.HeadlineboldTextFeildStyle()),
@@ -71,7 +70,7 @@ class _HomeState extends State<Home> {
                               Image.asset("images/salad2.png",
                                   height: 100, width: 100, fit: BoxFit.cover),
                               Text("Veggie Teco Hash",
-                                  style: AppWidget.mediumboldTextFeildStyle()),
+                                  style: AppWidget.semiboldTextFeildStyle()),
                               SizedBox(
                                 height: 5.0,
                               ),
@@ -103,10 +102,10 @@ class _HomeState extends State<Home> {
                             //salad edges adjusment
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Image.asset("images/salad3.png",
+                              Image.asset("images/salad2.png",
                                   height: 100, width: 100, fit: BoxFit.cover),
-                              Text("Veggie Teco Hash",
-                                  style: AppWidget.mediumboldTextFeildStyle()),
+                              Text("Veggie Tech Hash",
+                                  style: AppWidget.semiboldTextFeildStyle()),
                               SizedBox(
                                 height: 5.0,
                               ),
@@ -127,11 +126,62 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30.0,
+              ),
               Container(
-                child: Row(children: [
-                  Image.asset("images/salad2.png",height: 150,width: 150,fit: Box
-                  .callMethodVarArgs(method),)
-                ],),
+                margin: EdgeInsets.only(right: 14.0),
+                child: Material(
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    padding: EdgeInsets.all(5),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          "images/salad2.png",
+                          height: 120,
+                          width: 120,
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(
+                          width:20.0,
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                                //adjusting the title
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: Text(
+                                  "Mediterranem Chickpea Salad",
+                                  style: AppWidget.mediumboldTextFeildStyle(),
+                                )),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Container(
+                              //adjusting the title
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "Hone Goot Cheese",
+                                style: AppWidget.lightboldTextFeildStyle(),
+                              ),
+                            ),
+                            Container(
+                              //adjusting the title
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "\$40",
+                                style: AppWidget.semiboldTextFeildStyle(),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ],
           )),
