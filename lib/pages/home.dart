@@ -38,6 +38,58 @@ class _HomeState extends State<Home> {
                 ),
                 Text("Discover and Get Greate Food!",
                   style: AppWidget.lightboldTextFeildStyle()),
+                  SizedBox(height: 20.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                    Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        child: Image.asset("images/burger.png",height: 50,width: 50,fit: BoxFit.cover,),
+                      ),
+                    ),
+                    Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      child: Image.asset(
+                        "images/pizza.png",
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      child: Image.asset(
+                        "images/ice-cream.png",
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      child: Image.asset(
+                        "images/salad.png",
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  ],)
             ],
           )),
     );
