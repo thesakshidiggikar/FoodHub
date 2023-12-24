@@ -118,13 +118,13 @@ class _HomeState extends State<Home> {
                                 height: 1.0,
                               ),
                               Text("Fresh and Healthy",
-                                  style: AppWidget.lightboldTextFeildStyle()),
+                                  style: AppWidget.LightTextFeildStyle()),
                               SizedBox(
                                 height: 2.0,
                               ),
                               Text(
                                 "\$25",
-                                style: AppWidget.semiboldTextFeildStyle(),
+                                style: AppWidget.semiBoldTextFeildStyle(),
                               )
                             ],
                           ),
@@ -173,7 +173,7 @@ class _HomeState extends State<Home> {
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "Hone Goot Cheese",
-                                style: AppWidget.lightboldTextFeildStyle(),
+                                style: AppWidget.LightTextFeildStyle(),
                               ),
                             ),
                             Container(
@@ -181,7 +181,7 @@ class _HomeState extends State<Home> {
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "\$40",
-                                style: AppWidget.semiboldTextFeildStyle(),
+                                style: AppWidget.semiBoldTextFeildStyle(),
                               ),
                             ),
                           ],
