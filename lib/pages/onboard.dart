@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/signup.dart';
-import 'package:foodhub/widgets/_widget_support.dart';
+import 'package:foodhub/widgets/widget_support.dart';
 import 'package:foodhub/widgets/content_module.dart';
 
 class Onboard extends StatefulWidget {
@@ -17,6 +17,7 @@ class _OnboardState extends State<Onboard> {
   @override
   void initState() {
     _controller = PageController(initialPage: 0);
+
     super.initState();
   }
 
@@ -31,60 +32,79 @@ class _OnboardState extends State<Onboard> {
     return Scaffold(
       body: Column(
         children: [
-          PageView.builder(
-              controller: _controller,
-              onPageChanged: (int index) {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              itemCount: contents.length,
-              itemBuilder: (_, i) {
-                return Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        contents[i].image,
-                        height: 450,
-                        width: MediaQuery.of(context).size.width / 1.5,
-                        fit: BoxFit.fill,
-                      ),
-                      SizedBox(
-                        height: 40.0,
-                      ),
-                      Text(
-                        contents[i].title,
-                        style: AppWidget.semiboldTextFeildStyle(),
-                      )
-                    ],
-                  ),
-                );
-              }),
+          Expanded(
+            child: PageView.builder(
+                controller: _controller,
+                itemCount: contents.length,
+                onPageChanged: (int index) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                itemBuilder: (_, i) {
+                  return Padding(
+                    padding:
+                        EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          contents[i].image,
+                          height: 450,
+                          width: MediaQuery.of(context).size.width,
+                          fit: BoxFit.fill,
+                        ),
+                        SizedBox(
+                          height: 40.0,
+                        ),
+                        Text(
+                          contents[i].title,
+                          style: AppWidget.HeadlineTextFeildStyle(),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Text(
+                          contents[i].description,
+                          style: AppWidget.LightTextFeildStyle(),
+                        )
+                      ],
+                    ),
+                  );
+                }),
+          ),
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                  contents.length, (index) => buildDot(index, context)),
+                contents.length,
+                (index) => buildDot(index, context),
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               if (currentIndex == contents.length - 1) {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Signup()));
+                    context, MaterialPageRoute(builder: (context) => SignUp()));
               }
               _controller.nextPage(
-                  duration: Duration(milliseconds: 500),
+                  duration: Duration(milliseconds: 100),
                   curve: Curves.bounceIn);
             },
             child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(20)),
               height: 60,
               margin: EdgeInsets.all(40),
               width: double.infinity,
-              child: Text(
-                "Next",
-                style: AppWidget.semiboldTextFeildStyle(),
+              child: Center(
+                child: Text(
+                  currentIndex == contents.length - 1 ? "Start" : "Next",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           )

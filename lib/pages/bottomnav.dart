@@ -18,17 +18,16 @@ class _BottomNavState extends State<BottomNav> {
   late List<Widget> pages;
   late Widget currentPage;
   late Home homepage;
-  late Wallet wallet;
-  late Order order;
   late Profile profile;
+  late Order order;
+  late Wallet wallet;
 
   @override
   void initState() {
-    //sequence
     homepage = Home();
     order = Order();
-    wallet = Wallet();
     profile = Profile();
+    wallet = Wallet();
     pages = [homepage, order, wallet, profile];
     super.initState();
   }
@@ -37,33 +36,34 @@ class _BottomNavState extends State<BottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        height: 65,
-        backgroundColor: Colors.white ,
-        color: Color.fromARGB(255, 234, 112, 5),
-        animationDuration: Duration(milliseconds: 500),
-        onTap: (int index){
-          setState(() {
-            currentTabIndex=index;
-          });
-        },
-        items: [
-        Icon(
-          Icons.home_outlined,
-          color: Colors.black,),
-          Icon(
-            Icons.shopping_bag,
-            color: Colors.black,
-          ),
-          Icon(
-          Icons.wallet,
+          height: 65,
+          backgroundColor: Colors.white,
           color: Colors.black,
-        ),
-        Icon(
-          Icons.person_outlined,
-          color: Colors.black,
-        ),
+          animationDuration: Duration(milliseconds: 500),
+          onTap: (int index) {
+            setState(() {
+              currentTabIndex = index;
+            });
+          },
+          items: [
+            Icon(
+              Icons.home_outlined,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.shopping_bag_outlined,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.wallet_outlined,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.person_outline,
+              color: Colors.white,
+            )
           ]),
-          body: pages[currentTabIndex],
+      body: pages[currentTabIndex],
     );
   }
 }

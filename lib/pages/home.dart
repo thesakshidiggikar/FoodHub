@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/details.dart';
-import 'package:foodhub/widgets/_widget_support.dart';
+import 'package:foodhub/widgets/widget_support.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -42,9 +42,9 @@ class _HomeState extends State<Home> {
                 height: 7.0,
               ),
               Text("Delicious Food!",
-                  style: AppWidget.HeadlineboldTextFeildStyle()),
+                  style: AppWidget.HeadlineTextFeildStyle()),
               Text("Discover and Get Greate Food!",
-                  style: AppWidget.lightboldTextFeildStyle()),
+                  style: AppWidget.LightTextFeildStyle()),
               SizedBox(height: 20.0),
               Container(
                   margin: EdgeInsets.only(right: 20.0), child: showItem()),
@@ -77,18 +77,18 @@ class _HomeState extends State<Home> {
                                 Image.asset("images/salad2.png",
                                     height: 100, width: 100, fit: BoxFit.cover),
                                 Text("Veggie Teco Hash",
-                                    style: AppWidget.semiboldTextFeildStyle()),
+                                    style: AppWidget.semiBoldTextFeildStyle()),
                                 SizedBox(
                                   height: 5.0,
                                 ),
                                 Text("Fresh and Healthy",
-                                    style: AppWidget.lightboldTextFeildStyle()),
+                                    style: AppWidget.LightTextFeildStyle()),
                                 SizedBox(
                                   height: 1.0,
                                 ),
                                 Text(
                                   "\$25",
-                                  style: AppWidget.semiboldTextFeildStyle(),
+                                  style: AppWidget.semiBoldTextFeildStyle(),
                                 )
                               ],
                             ),
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
                               Image.asset("images/salad2.png",
                                   height: 100, width: 100, fit: BoxFit.cover),
                               Text("Veggie Tech Hash",
-                                  style: AppWidget.semiboldTextFeildStyle()),
+                                  style: AppWidget.semiBoldTextFeildStyle()),
                               SizedBox(
                                 height: 1.0,
                               ),
