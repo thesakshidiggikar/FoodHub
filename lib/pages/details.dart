@@ -180,7 +180,7 @@ class _DetailsState extends State<Details> {
                         "Total": total.toString(),
                         "Image": widget.image
                       };
-                      await DatabaseMethods().addFoodToCart(addFoodtoCart, id!);
+                     // await DatabaseMethods().addFoodToCart(addFoodtoCart, id!);
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           backgroundColor: Colors.orangeAccent,
                           content: Text(

@@ -44,7 +44,7 @@ class _SignUpState extends State<SignUp> {
           "Wallet": "0",
           "Id": Id,
         };
-        await DatabaseMethods().addUserDetail(addUserInfo, Id);
+        await DatabaseMethods().addUserDetails(addUserInfo, Id);
         await SharedPreferenceHelper().saveUserName(namecontroller.text);
         await SharedPreferenceHelper().saveUserEmail(mailcontroller.text);
         await SharedPreferenceHelper().saveUserWallet('0');
