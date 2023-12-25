@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   //click on button
   bool icecream = false, pizza = false, salad = false, burger = false;
 
-  Stream? fooditemStream;
+  // Stream? fooditemStream;
 
   ontheload() async {
     fooditemStream = await DatabaseMethods().getFoodItem("Pizza");
