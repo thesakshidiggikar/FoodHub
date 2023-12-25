@@ -159,13 +159,13 @@ class _OrderState extends State<Order> {
               height: 20.0,
             ),
             GestureDetector(
-              onTap: () async {
-                int amount = int.parse(wallet!) - amount2;
-                await DatabaseMethods()
-                    .UpdateUserwallet(id!, amount.toString());
-                await SharedPreferenceHelper()
-                    .saveUserWallet(amount.toString());
-              },
+              // onTap: () async {
+              //   int amount = int.parse(wallet!) - amount2;
+              //   await DatabaseMethods()
+              //       .UpdateUserwallet(id!, amount.toString());
+              //   await SharedPreferenceHelper()
+              //       .saveUserWallet(amount.toString());
+              // },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 width: MediaQuery.of(context).size.width,

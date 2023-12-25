@@ -38,16 +38,16 @@ class _HomeState extends State<Home> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder:(context, index)
-                   //{
-                    //DocumentSnapshot ds = snapshot.data.docs[index];
-                    // return GestureDetector(
-                    //   onTap: () {
-                    //     Navigator.push(
-                    //         context,
-                    //         //MaterialPageRoute(
-                    //          // builder: (context) => Details(),
-                    //         //));
-                    //   },
+                   {
+                    DocumentSnapshot ds = snapshot.data.docs[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                             builder: (context) => Details(),
+                            ));
+                      },
                       child: Container(
                         margin: EdgeInsets.all(6),
                         child: Material(
