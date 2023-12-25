@@ -8,6 +8,7 @@ import 'package:foodhub/pages/bottomnav.dart';
 import 'package:foodhub/pages/home.dart';
 import 'package:foodhub/pages/login.dart';
 import 'package:foodhub/pages/onboard.dart';
+import 'package:foodhub/pages/profile.dart';
 import 'package:foodhub/pages/signup.dart';
 import 'package:foodhub/widgets/app_constant.dart';
 
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: BottomNav());
+        home: Profile());
   }
 }
 
